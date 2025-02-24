@@ -75,15 +75,16 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
-        
+        <!-- jenkings updates -->
        <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.3.0</version>
     <configuration>
-        <redirectTestOutputToFile>false</redirectTestOutputToFile>
-        <printSummary>true</printSummary>
-        <useFile>false</useFile>  <!-- This forces console output -->
+       <suiteXmlFiles>
+       <suiteXmlFile>testng.xml</suiteXmlFile>
+       </suiteXmlFiles>
+       
     </configuration>
 </plugin>
 
